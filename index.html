@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ma Galerie Photo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(45deg, #ff6b6b, #f7c8f3);
+      color: #fff;
       margin: 0;
-      background: #f5f5f5;
     }
 
     header, footer {
@@ -22,14 +24,35 @@
       padding: 20px;
     }
 
-    .upload-section {
-      margin-bottom: 30px;
+    nav {
+      background: #333;
+      padding: 10px;
       text-align: center;
     }
 
-    input[type="file"] {
-      padding: 10px;
-      margin-top: 10px;
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #ff6b6b;
+    }
+
+    .upload-section {
+      margin-bottom: 30px;
+      text-align: center;
     }
 
     .gallery {
@@ -40,13 +63,19 @@
 
     .gallery img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .gallery img:hover {
-      transform: scale(1.03);
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
@@ -55,6 +84,14 @@
 <header>
   <h1>Ma Galerie Photo</h1>
 </header>
+
+<nav>
+  <ul>
+    <li><a href="#home">Accueil</a></li>
+    <li><a href="#gallery">Galerie</a></li>
+    <li><a href="#about">À propos</a></li>
+  </ul>
+</nav>
 
 <main>
   <div class="upload-section">
@@ -65,6 +102,11 @@
   <div class="gallery" id="gallery">
     <!-- Les aperçus des images apparaîtront ici -->
   </div>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <p>Bienvenue sur ma galerie photo ! Ici, vous pouvez découvrir mes dernières créations photographiques. N'hésitez pas à me contacter pour plus d'infos.</p>
+  </section>
 </main>
 
 <footer>
@@ -88,6 +130,229 @@
     });
   });
 </script>
+
+</body>
+</html>
+🚀 Résumé rapide
+Changement de fond : Utilisation de dégradé ou image de fond.
+
+Amélioration des images : Effets de bordures, ombres et animations.
+
+Navigation : Ajout d’une barre de navigation pour structurer le site.
+
+Personnalisation de police : Utilisation de Google Fonts pour des polices modernes.
+
+Essaye ça et ton site sera beaucoup plus attrayant ! Tu veux que je t'aide à ajouter un autre effet particulier ?
+
+
+
+
+
+
+
+Vous avez dit :
+peut tu me créer une personnalisation que tu me recommande que je n'ai plus que a copier coller*
+
+
+ChatGPT a dit :
+Bien sûr, je vais te créer une version personnalisée de ton site avec des améliorations de design. Cette version va inclure une mise en page moderne, des animations pour rendre ton site plus vivant, et quelques ajouts de structure comme une barre de navigation et un joli pied de page. Tu n'auras qu'à copier-coller tout le code dans ton fichier HTML.
+
+Voici la version améliorée de ton site avec tout ce que je recommande :
+
+html
+Copier
+Modifier
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma Galerie Photo</title>
+  
+  <!-- Google Fonts pour la police -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Style général du body */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(45deg, #ff6b6b, #f7c8f3); /* Dégradé */
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header : Section en haut du site */
+    header {
+      background-color: #333;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    /* Navigation (Barre en haut) */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff6b6b;
+    }
+
+    /* Section principale */
+    main {
+      padding: 20px;
+    }
+
+    .upload-section {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Animation d'apparition des images */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Section À propos */
+    #about {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #about h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    #about p {
+      font-size: 1.2em;
+    }
+
+    /* Footer : Pied de page */
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Style pour les liens du footer */
+    footer a {
+      color: #ff6b6b;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Ma Galerie Photo</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#about">À propos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Section Upload -->
+    <div class="upload-section">
+      <h2>Ajouter des Photos</h2>
+      <input type="file" id="fileInput" multiple accept="image/*">
+    </div>
+
+    <!-- Galerie d'images -->
+    <div class="gallery" id="gallery">
+      <!-- Les images ajoutées apparaîtront ici -->
+    </div>
+
+    <!-- Section À propos -->
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Bienvenue dans ma galerie photo ! Ici, vous pouvez découvrir mes dernières créations. Si vous souhaitez en savoir plus ou me contacter, n'hésitez pas à me suivre !</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 - Ma Galerie Photo | <a href="mailto:contact@example.com">Contactez-moi</a></p>
+  </footer>
+
+  <!-- JavaScript pour afficher les images -->
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const gallery = document.getElementById('gallery');
+
+    fileInput.addEventListener('change', function() {
+      gallery.innerHTML = ''; // vide la galerie avant d’ajouter
+      Array.from(this.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          gallery.appendChild(img);
+        }
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
 
 </body>
 </html>
